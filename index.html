@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badami Foods | Chicken Powder, Rs. 450 per kg</title>
+<meta name="description" content="Badami Foods halal chicken powder. No MSG added. Order the 25 kg sack or smaller packs at Rs. 450 per kg.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#order">Skip to order</a>
+
+<header class="top">
+  <a class="brand" href="#top" id="top">
+    <span class="brand-mark" aria-hidden="true">B</span>
+    <span>Badami Foods</span>
+  </a>
+  <nav aria-label="Main">
+    <a href="#packs">Packs</a>
+    <a href="#why">Why Badami</a>
+    <a href="#how">How to order</a>
+    <a class="nav-cta" href="#order">Order now</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Chicken<br>Powder</h1>
+      <p class="hero-sub">Rich chicken flavour for karahi, biryani, BBQ and soups. Halal certified, no MSG added.</p>
+      <p class="hero-price"><strong>Rs. 450</strong> per kg</p>
+      <div class="hero-actions">
+        <a class="btn btn-red" href="#order">Order now</a>
+        <a class="btn btn-line" href="#packs">See pack sizes</a>
+      </div>
+    </div>
+    <div class="hero-pic">
+      <img src="images/badami-chicken-powder-25kg.jpg" width="900" height="1263" alt="Badami Foods Chicken Powder 25 kg yellow sack with chef chicken logo">
+    </div>
+  </section>
+
+  <ul class="claims" aria-label="Product promises">
+    <li>Halal certified</li>
+    <li>No MSG added</li>
+    <li>100% natural</li>
+    <li>Made in Pakistan</li>
+  </ul>
+
+  <section class="section" id="why">
+    <h2>Made for kitchens that cook all day</h2>
+    <div class="why">
+      <div>
+        <h3>Strong, steady flavour</h3>
+        <p>Every batch is blended and tested so your karahi tastes the same on Monday and on Saturday.</p>
+      </div>
+      <div>
+        <h3>A fair price per kg</h3>
+        <p>One price for every kg: Rs. 450. Buy the 25 kg sack when you cook in bulk, or a small pack to try it first.</p>
+      </div>
+      <div>
+        <h3>Clean label</h3>
+        <p>Halal certified, 100% natural and no MSG added, so you can serve it with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section order-section" id="order">
+    <h2>Place your order</h2>
+    <p class="lead">Pick your packs, fill in your details and send the order on WhatsApp. We confirm the delivery charges and delivery time with you. You pay cash on delivery.</p>
+
+    <div class="order-grid">
+      <div class="packs" id="packs">
+        <h3>1. Choose your packs</h3>
+        <ul class="pack-list" id="packList"></ul>
+      </div>
+
+      <aside class="summary" aria-live="polite">
+        <h3>Your order</h3>
+        <ul id="summaryList" class="summary-list"></ul>
+        <p class="empty" id="emptyMsg">No packs yet. Add a pack to start your order.</p>
+        <p class="total-row"><span>Total</span><strong id="totalAmt">Rs. 0</strong></p>
+        <p class="note">Delivery charges are extra and confirmed on WhatsApp.</p>
+      </aside>
+    </div>
+
+    <form id="orderForm" class="form" novalidate>
+      <h3>2. Your details</h3>
+      <div class="fields">
+        <label>Full name
+          <input type="text" name="name" autocomplete="name" required>
+          <span class="err" data-for="name"></span>
+        </label>
+        <label>Phone number
+          <input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="0300 1234567" required>
+          <span class="err" data-for="phone"></span>
+        </label>
+        <label>City
+          <input type="text" name="city" autocomplete="address-level2" required>
+          <span class="err" data-for="city"></span>
+        </label>
+        <label class="wide">Delivery address
+          <textarea name="address" rows="3" autocomplete="street-address" required></textarea>
+          <span class="err" data-for="address"></span>
+        </label>
+        <label class="wide">Notes (optional)
+          <textarea name="notes" rows="2" placeholder="For example: deliver after 5 pm"></textarea>
+        </label>
+      </div>
+      <p class="pay">Payment: cash on delivery</p>
+      <button type="submit" class="btn btn-red btn-big">Send order on WhatsApp</button>
+      <p class="err form-err" id="formErr" role="alert"></p>
+    </form>
+
+    <div class="done" id="done" hidden tabindex="-1">
+      <h3>Your order is ready to send</h3>
+      <p>WhatsApp should have opened with your order. If it did not, use the buttons below.</p>
+      <pre id="orderText"></pre>
+      <div class="hero-actions">
+        <a class="btn btn-red" id="waLink" href="#" target="_blank" rel="noopener">Open WhatsApp</a>
+        <button class="btn btn-line" type="button" id="copyBtn">Copy order text</button>
+        <button class="btn btn-line" type="button" id="newBtn">Start a new order</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="how">
+    <h2>How ordering works</h2>
+    <ol class="steps">
+      <li><strong>Choose packs.</strong> Add the sizes and quantities you need.</li>
+      <li><strong>Send on WhatsApp.</strong> Fill in your details and send the order message.</li>
+      <li><strong>We confirm.</strong> We reply with delivery charges and delivery time.</li>
+      <li><strong>Pay on delivery.</strong> Pay cash when your order arrives.</li>
+    </ol>
+  </section>
+</main>
+
+<footer class="foot">
+  <div>
+    <p class="foot-brand">Badami Foods</p>
+    <p>Halal chicken powder. Made in Pakistan.</p>
+  </div>
+  <div>
+    <p>WhatsApp / Phone: <span id="footPhone">0300 0000000</span></p>
+    <p>Email: <span id="footEmail">info@badamifoods.example</span></p>
+    <p>Address: Your factory or office address, City</p>
+  </div>
+  <p class="copy">&copy; <span id="yr"></span> Badami Foods. A university project brand.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
